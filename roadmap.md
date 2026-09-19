@@ -14,3 +14,4 @@
 - [x] Exibir card de apoio via PIX abaixo do acesso e criação de conta
 - [x] Simplificar o início sem menu ou conta, com PIX em destaque e leitura direta dos 9 livros
 - [x] Integrar capas e gravuras editoriais temáticas ao conteúdo dos 9 livros no leitor
+- [x] Distribuir duas novas gravuras históricas em capítulos e seções adicionais de cada obra

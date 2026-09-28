@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BookOpen, LibraryBig } from "lucide-react";
 import { BookCover } from "@/components/BookCover";
-import { PixSupportCard, PixSupportFooter } from "@/components/PixSupportDialog";
+import { PixSupportCard } from "@/components/PixSupportDialog";
 import { Button } from "@/components/ui/button";
 import { useBooks } from "@/lib/library";
 
@@ -33,7 +33,7 @@ function Index() {
     <div className="flex min-h-screen flex-col bg-background">
       <main className="flex-1">
         <section className="border-b border-border/60">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(320px,400px)] lg:py-24">
+          <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:py-24">
             <div>
               <div className="mb-5 flex items-center gap-3 text-primary">
                 <LibraryBig className="size-5" />
@@ -50,7 +50,6 @@ function Index() {
               </p>
             </div>
 
-            <PixSupportCard />
           </div>
         </section>
 
@@ -117,15 +116,14 @@ function Index() {
               ))}
             </ul>
           )}
+
+          <div className="mt-14 flex justify-center border-t border-border pt-14 sm:mt-20 sm:pt-20">
+            <PixSupportCard />
+          </div>
         </section>
       </main>
-      <footer className="border-t border-border/60">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-[1fr_auto] sm:items-end sm:px-6">
-          <PixSupportFooter />
-          <p className="text-xs text-muted-foreground sm:text-right">
-            © {new Date().getFullYear()} Biblioteca Proibida · Leitura gratuita
-          </p>
-        </div>
+      <footer className="border-t border-border/60 px-4 py-8 text-center text-xs text-muted-foreground">
+        © {new Date().getFullYear()} Biblioteca Proibida · Leitura gratuita
       </footer>
     </div>
   );

@@ -16,3 +16,4 @@
 - [x] Integrar capas e gravuras editoriais temáticas ao conteúdo dos 9 livros no leitor
 - [x] Distribuir duas novas gravuras históricas em capítulos e seções adicionais de cada obra
 - [x] Ampliar cada obra para cinco gravuras contextuais ao longo da leitura
+- [x] Adicionar apoio via PIX aos rodapés da página inicial e das demais páginas

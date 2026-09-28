@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BookOpen, LibraryBig } from "lucide-react";
 import { BookCover } from "@/components/BookCover";
-import { PixSupportCard } from "@/components/PixSupportDialog";
+import { PixSupportCard, PixSupportFooter } from "@/components/PixSupportDialog";
 import { Button } from "@/components/ui/button";
 import { useBooks } from "@/lib/library";
 
@@ -119,8 +119,13 @@ function Index() {
           )}
         </section>
       </main>
-      <footer className="border-t border-border/60 px-4 py-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Biblioteca Proibida · Leitura gratuita
+      <footer className="border-t border-border/60">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-[1fr_auto] sm:items-end sm:px-6">
+          <PixSupportFooter />
+          <p className="text-xs text-muted-foreground sm:text-right">
+            © {new Date().getFullYear()} Biblioteca Proibida · Leitura gratuita
+          </p>
+        </div>
       </footer>
     </div>
   );

@@ -1,9 +1,10 @@
 import { Link } from "@tanstack/react-router";
+import { PixSupportFooter } from "@/components/PixSupportDialog";
 
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-border/60 bg-background/80">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_0.8fr_1fr]">
         <div>
           <p className="font-display text-sm font-bold tracking-[0.2em] text-primary uppercase">
             Biblioteca Proibida
@@ -42,13 +43,7 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
-        <div>
-          <p className="text-sm font-semibold">Acesso livre</p>
-          <p className="mt-3 text-sm text-muted-foreground">
-            Todos os títulos atuais estão liberados gratuitamente. Adicione os livros que quiser à
-            sua biblioteca e comece a ler.
-          </p>
-        </div>
+        <PixSupportFooter />
       </div>
       <div className="border-t border-border/60 py-6 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Biblioteca Proibida. Todos os direitos reservados.

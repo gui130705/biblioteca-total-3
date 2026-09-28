@@ -90,6 +90,36 @@ export function PixSupportCard() {
   );
 }
 
+export function PixSupportFooter() {
+  const { copied, handleCopy } = usePixCopy();
+
+  return (
+    <aside aria-labelledby="footer-pix-title">
+      <div className="flex items-center gap-2 text-primary">
+        <HeartHandshake className="size-4" />
+        <h2 id="footer-pix-title" className="font-display text-sm font-bold uppercase">
+          Apoie via PIX
+        </h2>
+      </div>
+      <p className="mt-3 text-xs text-muted-foreground">Chave PIX · Celular</p>
+      <p className="mt-1 font-mono text-base font-semibold text-foreground">{PIX_KEY}</p>
+      <p className="mt-2 text-xs text-muted-foreground">
+        Em nome de <span className="font-medium text-foreground">{PIX_NAME}</span>
+      </p>
+      <Button
+        variant="outline"
+        size="sm"
+        className="mt-4 w-full font-semibold uppercase sm:w-auto"
+        onClick={handleCopy}
+        aria-live="polite"
+      >
+        {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
+        {copied ? "Chave copiada" : "Copiar chave PIX"}
+      </Button>
+    </aside>
+  );
+}
+
 export function PixSupportDialog({
   mobile = false,
   onOpen,
